@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/launcher_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="false"
+    tools:context=".LauncherActivity">
+
+    <ImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:background="@android:color/black"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/shareIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="18dp"
+        android:alpha="1"
+        android:background="@drawable/settings0"
+        android:clickable="true"
+        android:contentDescription="@string/backgroundImage"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="1" />
+
+    <TextView
+        android:id="@+id/statustextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <CheckBox
+        android:id="@+id/allowAnonymousSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_above="@id/allowUnsafeDelete"
+        android:checked="true"
+        android:text="@string/allowAnonymousetei"
+        app:layout_constraintTop_toBottomOf="@+id/statustextView"
+        app:layout_constraintStart_toStartOf="@+id/statustextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/allowUnsafeDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_above="@id/statustextView"
+        android:checked="true"
+        android:text="@string/allowUnsafeDeletei"
+        app:layout_constraintTop_toBottomOf="@+id/allowAnonymousSet"
+        app:layout_constraintStart_toStartOf="@+id/statustextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <Button
+        android:id="@+id/copyUrlButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/statustextView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/copyUrl"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@+id/allowUnsafeDelete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/userNamePassWordayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/copyUrlButton"
+        android:alwaysDrawnWithCache="false"
+        android:animateLayoutChanges="true"
+        android:clickable="true"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toBottomOf="@+id/copyUrlButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/userNameout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="true"
+            android:clickable="true"
+            android:focusable="auto"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/userNameView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentLeft="false"
+                android:layout_centerVertical="true"
+                android:text="@string/userNamee"
+                android:textColor="@color/yellow"
+                android:textSize="28sp"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/userNameContentpassWordiew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentLeft="false"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/userNameView"
+                android:text="@string/stupidbeautypace"
+                android:textSize="28sp"
+                tools:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/PassWordayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userNameout"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="true"
+            android:clickable="true"
+            android:focusable="auto"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/passworduserNameView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentLeft="false"
+                android:layout_centerVertical="true"
+                android:text="@string/passWorde"
+                android:textColor="@color/yellow"
+                android:textSize="28sp"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/passWordiew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentLeft="false"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/passworduserNameView"
+                android:text="@string/ftpserverw"
+                android:textSize="28sp"
+                tools:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/promptAvailableSpaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/availableSpace"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@+id/userNamePassWordayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/availableSpaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:text="80000 Mb"
+        app:layout_constraintTop_toBottomOf="@+id/promptAvailableSpaceView"
+        app:layout_constraintStart_toStartOf="@+id/promptAvailableSpaceView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
